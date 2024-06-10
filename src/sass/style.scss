@@ -84,13 +84,17 @@ body {
 }
 
 .card-info__logo {
-  max-width: 70px;
+  max-width: 140px;
   margin-right: 35px;
 }
 
 .card-contacts {
-  display: flex;
-  background-color: lightgray;
+  display: grid;
+  background-color: #eceaea;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 0;
+  grid-gap: 100px;
+
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -161,4 +165,5 @@ body {
 
 .app-image {
   max-width: 700px;
+  justify-self: end;
 }
