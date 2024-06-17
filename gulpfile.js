@@ -5,7 +5,8 @@ import autoprefixer from 'gulp-autoprefixer';
 import concat from 'gulp-concat';
 import imagemin from 'gulp-imagemin';
 import browserSync from 'browser-sync';
-import ghPages from 'gulp-gh-pages'
+import ghPages from 'gulp-gh-pages';
+import webp from 'gulp-webp';
 
 const files = {
     htmlPath: 'src/**/*.html',
@@ -33,13 +34,14 @@ function sassTask() {
 
 function jsTask() {
     return gulp.src(files.jsPath)
-        .pipe(concat('bundle.js'))
+        .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(browserSync.stream());
 }
 
 function imageTask() {
     return gulp.src(files.imagePath)
+        .pipe(webp())
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'));
 }

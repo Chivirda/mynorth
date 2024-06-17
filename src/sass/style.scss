@@ -54,6 +54,10 @@ strong {
 .singlereport__title {
   font-size: 30px;
   line-height: 1.5em;
+
+  @media (max-width: 768px) {
+    line-height: 1em;
+  }
 }
 
 .singlereport__text {
@@ -110,6 +114,7 @@ strong {
 
     @media (max-width: 768px) {
       max-width: 90%;
+      margin: 0 auto !important;
     }
   }
 }
@@ -168,6 +173,10 @@ strong {
 
   h3 {
     margin-top: 0;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0 !important;
   }
 
   .card-info__text {
