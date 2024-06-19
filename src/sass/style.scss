@@ -39,6 +39,12 @@ h3 {
 }
 
 $text-font-size: 1.5em;
+$mobile-text: 16px;
+$desktop-text: 20px;
+$mobile-title: 24px;
+$desktop-title: 36px;
+$button-color: #163f61;
+$hover-button-color: #0E72BD;
 
 b,
 strong {
@@ -230,6 +236,12 @@ strong {
 
   li {
     margin-left: -27px;
+  }
+
+  a {
+    &:hover {
+      color: $hover-button-color;
+    }
   }
 }
 

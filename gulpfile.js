@@ -41,8 +41,8 @@ function jsTask() {
 
 function imageTask() {
     return gulp.src(files.imagePath)
-        .pipe(webp())
         .pipe(imagemin())
+        .pipe(webp())
         .pipe(gulp.dest('dist/images'));
 }
 
